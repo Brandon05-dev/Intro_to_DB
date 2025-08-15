@@ -1,5 +1,4 @@
 -- task_4.sql
--- Show full description of the Books table
 SELECT COLUMN_NAME AS 'Column',
        COLUMN_TYPE AS 'Type',
        IS_NULLABLE AS 'Null',
@@ -7,5 +6,5 @@ SELECT COLUMN_NAME AS 'Column',
        COLUMN_DEFAULT AS 'Default',
        EXTRA AS 'Extra'
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = DATABASE()
+WHERE TABLE_SCHEMA = 'alx_book_store'
   AND TABLE_NAME = 'Books';
