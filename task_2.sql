@@ -85,14 +85,15 @@ CREATE TABLE Order_Details (
     order_detail_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL,
     book_id INT NOT NULL,
-    quantity INT NOT NULL,
+    quantity DOUBLE NOT NULL,
     price DECIMAL(8,2) NOT NULL,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
 
+
 -- Sample data for Order_Details
 INSERT INTO Order_Details (order_id, book_id, quantity, price) VALUES
-(1, 1, 1, 20.00),
-(1, 3, 1, 15.00),
-(2, 2, 1, 25.00);
+(1, 1, 1.0, 20.00),
+(1, 3, 1.0, 15.00),
+(2, 2, 1.0, 25.00);
