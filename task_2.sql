@@ -47,19 +47,20 @@ INSERT INTO Books (title, author_id, genre, price, published_date) VALUES
 -- ----------------------------------------------------
 -- Table: Customers
 -- ----------------------------------------------------
+-- Customers table
 CREATE TABLE Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
+    customer_name VARCHAR(215) NOT NULL,
+    email VARCHAR(215) UNIQUE NOT NULL,
     phone VARCHAR(15),
-    address VARCHAR(255)
+    address TEXT
 );
 
+
 -- Sample data for Customers
-INSERT INTO Customers (first_name, last_name, email, phone, address) VALUES
-('John', 'Doe', 'john.doe@example.com', '1234567890', '123 Main St'),
-('Jane', 'Smith', 'jane.smith@example.com', '0987654321', '456 Elm St');
+INSERT INTO Customers (customer_name, email, phone, address) VALUES
+('John Doe', 'john.doe@example.com', '1234567890', '123 Main St'),
+('Jane Smith', 'jane.smith@example.com', '0987654321', '456 Elm St');
 
 -- ----------------------------------------------------
 -- Table: Orders
